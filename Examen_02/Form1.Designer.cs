@@ -90,6 +90,7 @@
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "QCM";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // panel1
             // 
@@ -112,6 +113,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(244, 315);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // textBox6
             // 
@@ -119,6 +121,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(89, 31);
             this.textBox6.TabIndex = 15;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label6
             // 
@@ -128,6 +131,7 @@
             this.label6.Size = new System.Drawing.Size(51, 25);
             this.label6.TabIndex = 14;
             this.label6.Text = "Note";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // checkBox4
             // 
@@ -158,6 +162,7 @@
             this.checkBox2.TabIndex = 11;
             this.checkBox2.Text = "1";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label5
             // 
@@ -174,6 +179,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(154, 31);
             this.textBox5.TabIndex = 9;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox4
             // 
@@ -181,6 +187,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(154, 31);
             this.textBox4.TabIndex = 8;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox3
             // 
@@ -195,6 +202,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(37, 31);
             this.textBox2.TabIndex = 6;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
@@ -204,6 +212,7 @@
             this.label4.Size = new System.Drawing.Size(30, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "ID";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -246,6 +255,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(244, 315);
             this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // textBox7
             // 
@@ -317,6 +327,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(154, 31);
             this.textBox12.TabIndex = 2;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // checkBox8
             // 
