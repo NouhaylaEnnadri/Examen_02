@@ -1,8 +1,8 @@
 namespace Examen_02
 {
-    public partial class Form1 : Form
+    public partial class creer_une_question : Form
     {
-        public Form1()
+        public creer_une_question()
         {
             InitializeComponent();
         }
@@ -88,6 +88,11 @@ namespace Examen_02
         }
 
         private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
         {
 
         }

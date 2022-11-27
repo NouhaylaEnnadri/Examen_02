@@ -1,6 +1,6 @@
 ﻿namespace Examen_02
 {
-    partial class Form1
+    partial class creer_une_question
     {
         /// <summary>
         ///  Required designer variable.
