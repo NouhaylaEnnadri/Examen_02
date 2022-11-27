@@ -11,7 +11,8 @@ namespace Examen_02
     {
         Q_Dichotomique question;
         string reponse { get; set; }
-        vrai_faux(Q_Dichotomique question, int id, string reponse) : base(id, question)
+
+        public vrai_faux(Q_Dichotomique question, int id, string reponse) : base(id, question)
         {
 
             this.reponse = reponse;

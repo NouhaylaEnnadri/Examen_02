@@ -96,5 +96,26 @@ namespace Examen_02
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         
+            print print = new print();
+            print.Show();
+            this.Visible = false; 
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            print print = new print();
+            print.Show();
+            this.Visible = false;
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

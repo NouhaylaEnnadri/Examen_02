@@ -16,8 +16,13 @@ namespace Examen_02
         {
             InitializeComponent();
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -16,7 +16,7 @@ namespace Examen_02
 
         private prestation prestation; // La prestation d'un etudiant  qui a passé un examen
 
-        public  etudiant() { }
+      
         public etudiant(string CIN, string nom, string Prenom)
         {
             this.CIN = CIN;

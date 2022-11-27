@@ -11,7 +11,7 @@ namespace Examen_02
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new creer_une_question());
+            Application.Run(new creer_un_examen());
         }
     }
 }
