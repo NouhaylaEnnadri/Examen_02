@@ -154,5 +154,10 @@ namespace Examen_02
         {
 
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

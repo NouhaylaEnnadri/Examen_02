@@ -65,5 +65,62 @@ namespace Examen_02
         {
             affichage();
         }
+
+        private void ajouter_Click(object sender, EventArgs e)
+        {
+            creer_une_question creer_une_question = new creer_une_question();
+            creer_une_question.Show();
+            this.Visible = false;
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            creer_un_examen creer_un_examen = new creer_un_examen();
+            creer_un_examen.Show();
+            this.Visible = false;
+        }
+
+        private void supprimer_Click(object sender, EventArgs e)
+        {
+            string box_msg = "confirmer la suppression";
+
+            string box_title = "confiramtion";
+
+
+
+            if (MessageBox.Show(box_msg, box_title, MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+            {
+
+                if (cmd.Connection.State == ConnectionState.Open)
+                {
+                    cmd.Connection.Close();
+                }
+                cnx.Open();
+                cmd.Connection = cnx;
+                cmd.CommandText = "delete from QCM where note='" + note.Text + "' ";
+                cmd.CommandText = "delete from QCM where question='" + enonce.Text + "' ";
+                cmd.CommandText = "delete from QCM where id_Q='" + id.Text + "' ";
+                cmd.CommandText = "delete from QCM where type='" + type.Text + "' ";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from QCM where id_E='" + id_e.Text + "' ";
+                cmd.ExecuteNonQuery();
+                cnx.Close();
+                affichage();
+
+            }
+            note.Text = "";
+            enonce.Text = "";
+            id_e.Text = "";
+            type.Text = "";
+            id.Text = ""; 
+
+
+
+            affichage();
+
+
+        }
     }
-}
+    }
+

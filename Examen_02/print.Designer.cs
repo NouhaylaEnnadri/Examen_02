@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.annuler = new System.Windows.Forms.Button();
+            this.modifier = new System.Windows.Forms.Button();
+            this.supprimer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.enonce = new System.Windows.Forms.TextBox();
             this.note = new System.Windows.Forms.TextBox();
@@ -39,7 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ajouter = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.id_e = new System.Windows.Forms.TextBox();
             this.type = new System.Windows.Forms.TextBox();
@@ -59,32 +59,33 @@
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // button2
+            // annuler
             // 
-            this.button2.Location = new System.Drawing.Point(69, 466);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 34);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "annuler";
-            this.button2.UseVisualStyleBackColor = true;
+            this.annuler.Location = new System.Drawing.Point(69, 466);
+            this.annuler.Name = "annuler";
+            this.annuler.Size = new System.Drawing.Size(112, 34);
+            this.annuler.TabIndex = 3;
+            this.annuler.Text = "annuler";
+            this.annuler.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // modifier
             // 
-            this.button3.Location = new System.Drawing.Point(69, 417);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 34);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "modifier";
-            this.button3.UseVisualStyleBackColor = true;
+            this.modifier.Location = new System.Drawing.Point(69, 417);
+            this.modifier.Name = "modifier";
+            this.modifier.Size = new System.Drawing.Size(112, 34);
+            this.modifier.TabIndex = 4;
+            this.modifier.Text = "modifier";
+            this.modifier.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // supprimer
             // 
-            this.button4.Location = new System.Drawing.Point(69, 363);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 34);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "supprimer";
-            this.button4.UseVisualStyleBackColor = true;
+            this.supprimer.Location = new System.Drawing.Point(69, 363);
+            this.supprimer.Name = "supprimer";
+            this.supprimer.Size = new System.Drawing.Size(112, 34);
+            this.supprimer.TabIndex = 5;
+            this.supprimer.Text = "supprimer";
+            this.supprimer.UseVisualStyleBackColor = true;
+            this.supprimer.Click += new System.EventHandler(this.supprimer_Click);
             // 
             // label1
             // 
@@ -143,14 +144,15 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "ID";
             // 
-            // button1
+            // ajouter
             // 
-            this.button1.Location = new System.Drawing.Point(69, 313);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "ajouter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ajouter.Location = new System.Drawing.Point(69, 313);
+            this.ajouter.Name = "ajouter";
+            this.ajouter.Size = new System.Drawing.Size(112, 34);
+            this.ajouter.TabIndex = 19;
+            this.ajouter.Text = "ajouter";
+            this.ajouter.UseVisualStyleBackColor = true;
+            this.ajouter.Click += new System.EventHandler(this.ajouter_Click);
             // 
             // label5
             // 
@@ -192,6 +194,7 @@
             this.retour.TabIndex = 24;
             this.retour.Text = "return";
             this.retour.UseVisualStyleBackColor = true;
+            this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
             // print
             // 
@@ -203,7 +206,7 @@
             this.Controls.Add(this.type);
             this.Controls.Add(this.id_e);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ajouter);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.id);
             this.Controls.Add(this.label4);
@@ -211,9 +214,9 @@
             this.Controls.Add(this.note);
             this.Controls.Add(this.enonce);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.supprimer);
+            this.Controls.Add(this.modifier);
+            this.Controls.Add(this.annuler);
             this.Controls.Add(this.dataGridView2);
             this.Name = "print";
             this.Text = "print";
@@ -243,5 +246,9 @@
         private Label label6;
         private Button button5;
         private Button retour;
+        private Button annuler;
+        private Button modifier;
+        private Button supprimer;
+        private Button ajouter;
     }
 }

@@ -68,6 +68,7 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.annuler = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -379,6 +380,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(244, 315);
             this.panel3.TabIndex = 6;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // textBox13
             // 
@@ -456,7 +458,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(373, 434);
+            this.button1.Location = new System.Drawing.Point(302, 434);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 34);
             this.button1.TabIndex = 7;
@@ -464,11 +466,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // annuler
+            // 
+            this.annuler.Location = new System.Drawing.Point(434, 434);
+            this.annuler.Name = "annuler";
+            this.annuler.Size = new System.Drawing.Size(112, 34);
+            this.annuler.TabIndex = 8;
+            this.annuler.Text = "Submit";
+            this.annuler.UseVisualStyleBackColor = true;
+            // 
             // creer_une_question
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 480);
+            this.Controls.Add(this.annuler);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.checkBox10);
@@ -542,5 +554,6 @@
         private TextBox question_input;
         private Label i;
         private TextBox id_e;
+        private Button annuler;
     }
 }
