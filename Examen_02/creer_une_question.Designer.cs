@@ -48,15 +48,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.question_input = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.notes2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.faux = new System.Windows.Forms.CheckBox();
+            this.varai = new System.Windows.Forms.CheckBox();
+            this.id2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.enonce2 = new System.Windows.Forms.TextBox();
+            this.dichocheck = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -268,27 +268,27 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.notes2);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.checkBox5);
-            this.panel2.Controls.Add(this.checkBox7);
-            this.panel2.Controls.Add(this.textBox11);
+            this.panel2.Controls.Add(this.faux);
+            this.panel2.Controls.Add(this.varai);
+            this.panel2.Controls.Add(this.id2);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.textBox12);
+            this.panel2.Controls.Add(this.enonce2);
             this.panel2.Location = new System.Drawing.Point(302, 102);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(244, 315);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // textBox7
+            // notes2
             // 
-            this.textBox7.Location = new System.Drawing.Point(122, 237);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(89, 31);
-            this.textBox7.TabIndex = 15;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.notes2.Location = new System.Drawing.Point(122, 237);
+            this.notes2.Name = "notes2";
+            this.notes2.Size = new System.Drawing.Size(89, 31);
+            this.notes2.TabIndex = 15;
+            this.notes2.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label7
             // 
@@ -300,33 +300,33 @@
             this.label7.Text = "Note";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // checkBox5
+            // faux
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(28, 162);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(71, 29);
-            this.checkBox5.TabIndex = 13;
-            this.checkBox5.Text = "faux";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            this.faux.AutoSize = true;
+            this.faux.Location = new System.Drawing.Point(28, 162);
+            this.faux.Name = "faux";
+            this.faux.Size = new System.Drawing.Size(71, 29);
+            this.faux.TabIndex = 13;
+            this.faux.Text = "faux";
+            this.faux.UseVisualStyleBackColor = true;
+            this.faux.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
-            // checkBox7
+            // varai
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(28, 120);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(67, 29);
-            this.checkBox7.TabIndex = 11;
-            this.checkBox7.Text = "Vrai";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.varai.AutoSize = true;
+            this.varai.Location = new System.Drawing.Point(28, 120);
+            this.varai.Name = "varai";
+            this.varai.Size = new System.Drawing.Size(67, 29);
+            this.varai.TabIndex = 11;
+            this.varai.Text = "Vrai";
+            this.varai.UseVisualStyleBackColor = true;
             // 
-            // textBox11
+            // id2
             // 
-            this.textBox11.Location = new System.Drawing.Point(186, 43);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(37, 31);
-            this.textBox11.TabIndex = 6;
+            this.id2.Location = new System.Drawing.Point(186, 43);
+            this.id2.Name = "id2";
+            this.id2.Size = new System.Drawing.Size(37, 31);
+            this.id2.TabIndex = 6;
             // 
             // label9
             // 
@@ -346,24 +346,24 @@
             this.label11.TabIndex = 3;
             this.label11.Text = "Question";
             // 
-            // textBox12
+            // enonce2
             // 
-            this.textBox12.Location = new System.Drawing.Point(12, 43);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(154, 31);
-            this.textBox12.TabIndex = 2;
-            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            this.enonce2.Location = new System.Drawing.Point(12, 43);
+            this.enonce2.Name = "enonce2";
+            this.enonce2.Size = new System.Drawing.Size(154, 31);
+            this.enonce2.TabIndex = 2;
+            this.enonce2.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
-            // checkBox8
+            // dichocheck
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(302, 67);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(151, 29);
-            this.checkBox8.TabIndex = 3;
-            this.checkBox8.Text = "Dichotomique";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            this.dichocheck.AutoSize = true;
+            this.dichocheck.Location = new System.Drawing.Point(302, 67);
+            this.dichocheck.Name = "dichocheck";
+            this.dichocheck.Size = new System.Drawing.Size(151, 29);
+            this.dichocheck.TabIndex = 3;
+            this.dichocheck.Text = "Dichotomique";
+            this.dichocheck.UseVisualStyleBackColor = true;
+            this.dichocheck.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // panel3
             // 
@@ -486,7 +486,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.checkBox10);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.checkBox8);
+            this.Controls.Add(this.dichocheck);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.qcm);
             this.Controls.Add(this.label1);
@@ -556,5 +556,11 @@
         private Label i;
         private TextBox id_e;
         private Button annuler;
+        private TextBox notes2;
+        private CheckBox faux;
+        private CheckBox varai;
+        private TextBox id2;
+        private TextBox enonce2;
+        private CheckBox dichocheck;
     }
 }

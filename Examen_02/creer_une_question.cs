@@ -47,7 +47,13 @@ namespace Examen_02
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            #region dichititlique
+            checkBox8.Enabled = false;
+            textBox12.Enabled = false;
+            checkBox7.Enabled = false;
+            checkBox5.Enabled = false;
+            textBox7.Enabled = false;
+            #endregion
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -121,13 +127,18 @@ namespace Examen_02
 
             ////
             /// 
-            
-           cnx.Open();
-            cmd.Connection = cnx;
-            cmd.CommandText = "insert into QCM(id_Q ,  id_E , note , question , type ) values('" + id_input.Text + "','" + id_e.Text + "','" + note.Text + "','" + question_input.Text + "','" + "qcm" + "') ";
-            cmd.ExecuteNonQuery();
-            cnx.Close();
            
+
+
+                cnx.Open();
+                cmd.Connection = cnx;
+                cmd.CommandText = "insert into QCM(id_Q ,  id_E , note , question , type ) values('" + id_input.Text + "','" + id_e.Text + "','" + note.Text + "','" + question_input.Text + "','" + "qcm" + "') ";
+                cmd.ExecuteNonQuery();
+                cnx.Close();
+
+                
+           
+
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)

@@ -43,7 +43,6 @@
             this.ajoutQ_btn = new System.Windows.Forms.Button();
             this.supp_btn = new System.Windows.Forms.Button();
             this.mdf_btn = new System.Windows.Forms.Button();
-            this.enregistrer = new System.Windows.Forms.Button();
             this.affiQ_btn = new System.Windows.Forms.Button();
             this.dateF = new System.Windows.Forms.TextBox();
             this.dateD = new System.Windows.Forms.TextBox();
@@ -187,16 +186,6 @@
             this.mdf_btn.UseVisualStyleBackColor = true;
             this.mdf_btn.Click += new System.EventHandler(this.mdf_btn_Click);
             // 
-            // enregistrer
-            // 
-            this.enregistrer.Location = new System.Drawing.Point(644, 386);
-            this.enregistrer.Name = "enregistrer";
-            this.enregistrer.Size = new System.Drawing.Size(112, 34);
-            this.enregistrer.TabIndex = 17;
-            this.enregistrer.Text = "enregistrer";
-            this.enregistrer.UseVisualStyleBackColor = true;
-            this.enregistrer.Click += new System.EventHandler(this.enregistrer_Click);
-            // 
             // affiQ_btn
             // 
             this.affiQ_btn.Location = new System.Drawing.Point(733, 321);
@@ -231,7 +220,6 @@
             this.Controls.Add(this.dateD);
             this.Controls.Add(this.dateF);
             this.Controls.Add(this.affiQ_btn);
-            this.Controls.Add(this.enregistrer);
             this.Controls.Add(this.mdf_btn);
             this.Controls.Add(this.supp_btn);
             this.Controls.Add(this.ajoutQ_btn);
@@ -272,7 +260,6 @@
         private Button ajoutQ_btn;
         private Button supp_btn;
         private Button mdf_btn;
-        private Button enregistrer;
         private Button affiQ_btn;
         private TextBox dateF;
         private TextBox dateD;
