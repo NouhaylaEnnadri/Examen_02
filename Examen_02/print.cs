@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Examen_02
 {
     public partial class print : Form
     {
+       
         public print()
         {
             InitializeComponent();
@@ -49,14 +51,16 @@ namespace Examen_02
         }
         public void affichage()
         {
-
+            creer_un_examen creer_un_examen = new creer_un_examen();
+            
             cnx.Open();
-            cmd.CommandText = "select * from QCM,Examen where Examen.id = QCM.id_E ";
+            cmd.CommandText = "select id_Q , id_E , note , question , type  from QCM where  QCM.id_E  ='" + creer_un_examen.ex + "' ";
             cmd.Connection = cnx;
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             dataGridView2.DataSource = dt;
             cnx.Close();
+           
 
 
         }
@@ -78,6 +82,7 @@ namespace Examen_02
             creer_un_examen creer_un_examen = new creer_un_examen();
             creer_un_examen.Show();
             this.Visible = false;
+          
         }
 
         private void supprimer_Click(object sender, EventArgs e)
@@ -98,13 +103,9 @@ namespace Examen_02
                 }
                 cnx.Open();
                 cmd.Connection = cnx;
-                cmd.CommandText = "delete from QCM where note='" + note.Text + "' ";
-                cmd.CommandText = "delete from QCM where question='" + enonce.Text + "' ";
                 cmd.CommandText = "delete from QCM where id_Q='" + id.Text + "' ";
-                cmd.CommandText = "delete from QCM where type='" + type.Text + "' ";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from QCM where id_E='" + id_e.Text + "' ";
-                cmd.ExecuteNonQuery();
+               
                 cnx.Close();
                 affichage();
 
@@ -120,6 +121,47 @@ namespace Examen_02
             affichage();
 
 
+        }
+        int flag = 0;
+        private void modifier_Click(object sender, EventArgs e)
+        {
+
+           
+            if (flag == 0)
+            {
+                enonce.Enabled = false;
+                type.Enabled = false;
+                id.Enabled = false;
+                flag = 1; 
+            }
+           
+            else
+            {
+
+                cnx.Open();
+                cmd.Connection = cnx;
+
+                cmd.CommandText = "update QCM set note ='" + note.Text + "' where id_Q='" + id.Text + "' ";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update QCM set id_E ='" + id_e.Text + "' where id_Q='" + id.Text + "' ";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update QCM set question ='" + enonce.Text + "' where id_Q='" + id.Text + "' ";
+                cmd.ExecuteNonQuery();
+                cnx.Close();
+                flag = 0; 
+            }
+                affichage();
+               
+           
+        }
+
+        private void annuler_Click(object sender, EventArgs e)
+        {
+            note.Text = "";
+            enonce.Text = "";
+            id_e.Text = "";
+            type.Text = "";
+            id.Text = "";
         }
     }
     }

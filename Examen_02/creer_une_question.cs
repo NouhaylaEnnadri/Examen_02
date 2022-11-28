@@ -48,11 +48,10 @@ namespace Examen_02
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             #region dichititlique
-            checkBox8.Enabled = false;
-            textBox12.Enabled = false;
-            checkBox7.Enabled = false;
-            checkBox5.Enabled = false;
-            textBox7.Enabled = false;
+            dichocheck.Enabled = false;
+            checkBox10.Enabled = false; 
+            panel2.Enabled = false;
+            panel3.Enabled = false; 
             #endregion
         }
 
@@ -136,7 +135,7 @@ namespace Examen_02
                 cmd.ExecuteNonQuery();
                 cnx.Close();
 
-                
+            
            
 
         }
@@ -158,7 +157,7 @@ namespace Examen_02
 
         private void proposition2_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void id_e_TextChanged(object sender, EventArgs e)

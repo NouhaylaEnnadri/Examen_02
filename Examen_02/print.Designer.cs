@@ -65,8 +65,9 @@
             this.annuler.Name = "annuler";
             this.annuler.Size = new System.Drawing.Size(112, 34);
             this.annuler.TabIndex = 3;
-            this.annuler.Text = "annuler";
+            this.annuler.Text = "enregistrer";
             this.annuler.UseVisualStyleBackColor = true;
+            this.annuler.Click += new System.EventHandler(this.annuler_Click);
             // 
             // modifier
             // 
@@ -76,6 +77,7 @@
             this.modifier.TabIndex = 4;
             this.modifier.Text = "modifier";
             this.modifier.UseVisualStyleBackColor = true;
+            this.modifier.Click += new System.EventHandler(this.modifier_Click);
             // 
             // supprimer
             // 

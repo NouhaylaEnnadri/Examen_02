@@ -46,6 +46,7 @@
             this.affiQ_btn = new System.Windows.Forms.Button();
             this.dateF = new System.Windows.Forms.TextBox();
             this.dateD = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listeQ)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,9 +55,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(98, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 25);
+            this.label1.Size = new System.Drawing.Size(141, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "creer un question";
+            this.label1.Text = "creer un examen";
             // 
             // listeQ
             // 
@@ -70,7 +71,7 @@
             // 
             // ajout_btn
             // 
-            this.ajout_btn.Location = new System.Drawing.Point(508, 239);
+            this.ajout_btn.Location = new System.Drawing.Point(408, 239);
             this.ajout_btn.Name = "ajout_btn";
             this.ajout_btn.Size = new System.Drawing.Size(112, 34);
             this.ajout_btn.TabIndex = 3;
@@ -91,9 +92,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(522, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 25);
+            this.label2.Size = new System.Drawing.Size(150, 25);
             this.label2.TabIndex = 5;
-            this.label2.Text = "liste des questions";
+            this.label2.Text = "liste des examens";
             // 
             // label3
             // 
@@ -168,7 +169,7 @@
             // 
             // supp_btn
             // 
-            this.supp_btn.Location = new System.Drawing.Point(786, 239);
+            this.supp_btn.Location = new System.Drawing.Point(733, 239);
             this.supp_btn.Name = "supp_btn";
             this.supp_btn.Size = new System.Drawing.Size(112, 34);
             this.supp_btn.TabIndex = 15;
@@ -178,7 +179,7 @@
             // 
             // mdf_btn
             // 
-            this.mdf_btn.Location = new System.Drawing.Point(644, 239);
+            this.mdf_btn.Location = new System.Drawing.Point(561, 239);
             this.mdf_btn.Name = "mdf_btn";
             this.mdf_btn.Size = new System.Drawing.Size(112, 34);
             this.mdf_btn.TabIndex = 16;
@@ -212,11 +213,22 @@
             this.dateD.TabIndex = 20;
             this.dateD.TextChanged += new System.EventHandler(this.dateD_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(893, 239);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "enregistrer";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // creer_un_examen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateD);
             this.Controls.Add(this.dateF);
             this.Controls.Add(this.affiQ_btn);
@@ -263,5 +275,6 @@
         private Button affiQ_btn;
         private TextBox dateF;
         private TextBox dateD;
+        private Button button1;
     }
 }

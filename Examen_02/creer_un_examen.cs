@@ -16,7 +16,12 @@ namespace Examen_02
         {
             InitializeComponent();
         }
+        public static string ex  = ""; 
+        public string function ()
+        {
 
+            return id_input.Text;
+        }
 
         #region connexion 
         static string Chaine = @"Data Source=DESKTOP-H5O83VN\SQLEXPRESS;Initial Catalog=EXAMEN;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -52,6 +57,7 @@ namespace Examen_02
 
         private void ajout_btn_Click(object sender, EventArgs e)
         {
+
             cnx.Open();
             cmd.Connection = cnx;
             cmd.CommandText = "insert into Examen(nom, id , duree , dateD , dateF) values('" + name_input.Text + "','" + id_input.Text + "','" + duree.Text + "','" + dateD.Text + "','" + dateF.Text + "') ";
@@ -105,6 +111,11 @@ namespace Examen_02
                 affichage(); 
 
             }
+            id_input.Text = "";
+            name_input.Text = "";
+            duree.Text = "";
+            dateD.Text = "";
+            dateF.Text = ""; 
             affichage();
 
 
@@ -112,14 +123,18 @@ namespace Examen_02
 
         private void ajoutQ_btn_Click(object sender, EventArgs e)
         {
+
+
             creer_une_question creer_une_question = new creer_une_question();
             creer_une_question.Show();
             this.Visible = false;
+
         }
 
         private void affiQ_btn_Click(object sender, EventArgs e)
-        {   
-
+        {
+            ex = id_input.Text; 
+            
             string id = id_input.Text;  
             if(id == "")
             {
@@ -156,6 +171,7 @@ namespace Examen_02
                 duree.Text = row.Cells["duree"].Value.ToString();
                 dateD.Text = row.Cells["dateD"].Value.ToString();
                 dateF.Text = row.Cells["dateF"].Value.ToString();
+               
 
 
 
@@ -188,8 +204,19 @@ namespace Examen_02
             adapter.Fill(dt);
             listeQ.DataSource = dt;
             cnx.Close();
+          
             #endregion
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            id_input.Text = "";
+            name_input.Text = "";
+            duree.Text = "";
+            dateD.Text = "";
+            dateF.Text = "";
         }
     }
 
