@@ -99,21 +99,35 @@ namespace Examen_02
 
         private void button1_Click(object sender, EventArgs e)
         {
-         
-            print print = new print();
-            print.Show();
-            this.Visible = false; 
+
+           
+            
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            print print = new print();
-            print.Show();
+            creer_un_examen creer_un_examen = new creer_un_examen();
+            creer_un_examen.Show();
             this.Visible = false;
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void id_rep2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void id_rep_3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void proposition2_TextChanged(object sender, EventArgs e)
         {
 
         }

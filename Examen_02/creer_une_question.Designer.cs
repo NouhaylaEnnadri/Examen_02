@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.qcm = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.note = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.id_rep2 = new System.Windows.Forms.CheckBox();
+            this.id_rep_3 = new System.Windows.Forms.CheckBox();
+            this.id_rep_1 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.proposition3 = new System.Windows.Forms.TextBox();
+            this.proposition1 = new System.Windows.Forms.TextBox();
+            this.proposition2 = new System.Windows.Forms.TextBox();
+            this.id_input = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.question_input = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -81,47 +81,47 @@
             this.label1.Text = "Creation d\'une question\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // checkBox1
+            // qcm
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(27, 67);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(79, 29);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "QCM";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.qcm.AutoSize = true;
+            this.qcm.Location = new System.Drawing.Point(27, 67);
+            this.qcm.Name = "qcm";
+            this.qcm.Size = new System.Drawing.Size(79, 29);
+            this.qcm.TabIndex = 1;
+            this.qcm.Text = "QCM";
+            this.qcm.UseVisualStyleBackColor = true;
+            this.qcm.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.note);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.checkBox4);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox2);
+            this.panel1.Controls.Add(this.id_rep2);
+            this.panel1.Controls.Add(this.id_rep_3);
+            this.panel1.Controls.Add(this.id_rep_1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.proposition3);
+            this.panel1.Controls.Add(this.proposition1);
+            this.panel1.Controls.Add(this.proposition2);
+            this.panel1.Controls.Add(this.id_input);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.question_input);
             this.panel1.Location = new System.Drawing.Point(27, 102);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(244, 315);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // textBox6
+            // note
             // 
-            this.textBox6.Location = new System.Drawing.Point(108, 243);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(89, 31);
-            this.textBox6.TabIndex = 15;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.note.Location = new System.Drawing.Point(108, 243);
+            this.note.Name = "note";
+            this.note.Size = new System.Drawing.Size(89, 31);
+            this.note.TabIndex = 15;
+            this.note.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label6
             // 
@@ -133,36 +133,38 @@
             this.label6.Text = "Note";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // checkBox4
+            // id_rep2
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(12, 162);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(48, 29);
-            this.checkBox4.TabIndex = 13;
-            this.checkBox4.Text = "2";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.id_rep2.AutoSize = true;
+            this.id_rep2.Location = new System.Drawing.Point(12, 162);
+            this.id_rep2.Name = "id_rep2";
+            this.id_rep2.Size = new System.Drawing.Size(48, 29);
+            this.id_rep2.TabIndex = 13;
+            this.id_rep2.Text = "2";
+            this.id_rep2.UseVisualStyleBackColor = true;
+            this.id_rep2.CheckedChanged += new System.EventHandler(this.id_rep2_CheckedChanged);
             // 
-            // checkBox3
+            // id_rep_3
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(12, 200);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(48, 29);
-            this.checkBox3.TabIndex = 12;
-            this.checkBox3.Text = "3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.id_rep_3.AutoSize = true;
+            this.id_rep_3.Location = new System.Drawing.Point(12, 200);
+            this.id_rep_3.Name = "id_rep_3";
+            this.id_rep_3.Size = new System.Drawing.Size(48, 29);
+            this.id_rep_3.TabIndex = 12;
+            this.id_rep_3.Text = "3";
+            this.id_rep_3.UseVisualStyleBackColor = true;
+            this.id_rep_3.CheckedChanged += new System.EventHandler(this.id_rep_3_CheckedChanged);
             // 
-            // checkBox2
+            // id_rep_1
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(12, 122);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(48, 29);
-            this.checkBox2.TabIndex = 11;
-            this.checkBox2.Text = "1";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.id_rep_1.AutoSize = true;
+            this.id_rep_1.Location = new System.Drawing.Point(12, 122);
+            this.id_rep_1.Name = "id_rep_1";
+            this.id_rep_1.Size = new System.Drawing.Size(48, 29);
+            this.id_rep_1.TabIndex = 11;
+            this.id_rep_1.Text = "1";
+            this.id_rep_1.UseVisualStyleBackColor = true;
+            this.id_rep_1.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label5
             // 
@@ -173,36 +175,37 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Proposition";
             // 
-            // textBox5
+            // proposition3
             // 
-            this.textBox5.Location = new System.Drawing.Point(77, 194);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(154, 31);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.proposition3.Location = new System.Drawing.Point(77, 194);
+            this.proposition3.Name = "proposition3";
+            this.proposition3.Size = new System.Drawing.Size(154, 31);
+            this.proposition3.TabIndex = 9;
+            this.proposition3.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox4
+            // proposition1
             // 
-            this.textBox4.Location = new System.Drawing.Point(77, 120);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 31);
-            this.textBox4.TabIndex = 8;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.proposition1.Location = new System.Drawing.Point(77, 120);
+            this.proposition1.Name = "proposition1";
+            this.proposition1.Size = new System.Drawing.Size(154, 31);
+            this.proposition1.TabIndex = 8;
+            this.proposition1.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox3
+            // proposition2
             // 
-            this.textBox3.Location = new System.Drawing.Point(77, 157);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 31);
-            this.textBox3.TabIndex = 7;
+            this.proposition2.Location = new System.Drawing.Point(77, 157);
+            this.proposition2.Name = "proposition2";
+            this.proposition2.Size = new System.Drawing.Size(154, 31);
+            this.proposition2.TabIndex = 7;
+            this.proposition2.TextChanged += new System.EventHandler(this.proposition2_TextChanged);
             // 
-            // textBox2
+            // id_input
             // 
-            this.textBox2.Location = new System.Drawing.Point(186, 43);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(37, 31);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.id_input.Location = new System.Drawing.Point(186, 43);
+            this.id_input.Name = "id_input";
+            this.id_input.Size = new System.Drawing.Size(37, 31);
+            this.id_input.TabIndex = 6;
+            this.id_input.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
@@ -232,13 +235,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Question";
             // 
-            // textBox1
+            // question_input
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 31);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.question_input.Location = new System.Drawing.Point(12, 43);
+            this.question_input.Name = "question_input";
+            this.question_input.Size = new System.Drawing.Size(154, 31);
+            this.question_input.TabIndex = 2;
+            this.question_input.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel2
             // 
@@ -451,7 +454,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.checkBox8);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.qcm);
             this.Controls.Add(this.label1);
             this.Name = "creer_une_question";
             this.Text = "Form1";
@@ -506,5 +509,15 @@
         private TextBox textBox10;
         private CheckBox checkBox10;
         private Button button1;
+        private CheckBox qcm;
+        private TextBox note;
+        private CheckBox id_rep2;
+        private CheckBox id_rep_3;
+        private CheckBox id_rep_1;
+        private TextBox proposition3;
+        private TextBox proposition1;
+        private TextBox proposition2;
+        private TextBox id_input;
+        private TextBox question_input;
     }
 }
