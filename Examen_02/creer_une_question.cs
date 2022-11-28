@@ -1,3 +1,6 @@
+using System;
+using System.Data.SqlClient;
+
 namespace Examen_02
 {
     public partial class creer_une_question : Form
@@ -7,6 +10,11 @@ namespace Examen_02
             InitializeComponent();
         }
 
+        static string Chaine = @"Data Source=DESKTOP-H5O83VN\SQLEXPRESS;Initial Catalog=EXAMEN;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+        static SqlConnection cnx = new SqlConnection(Chaine);
+        static SqlCommand cmd = new SqlCommand();
+        static SqlDataAdapter adapter = new SqlDataAdapter(cmd);
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -110,6 +118,14 @@ namespace Examen_02
             creer_un_examen creer_un_examen = new creer_un_examen();
             creer_un_examen.Show();
             this.Visible = false;
+
+            ////
+            /// cnx.Open();
+            cmd.Connection = cnx;
+            cmd.CommandText = "insert into Examen(id, id , note , dateD , dateF) values('" + name_input.Text + "','" + id_input.Text + "','" + duree.Text + "','" + dateD.Text + "','" + dateF.Text + "') ";
+            cmd.ExecuteNonQuery();
+            cnx.Close();
+           
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
