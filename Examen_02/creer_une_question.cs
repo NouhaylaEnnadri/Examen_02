@@ -159,5 +159,12 @@ namespace Examen_02
         {
 
         }
+
+        private void annuler_Click(object sender, EventArgs e)
+        {
+            creer_un_examen creer_un_examen = new creer_un_examen();
+            creer_un_examen.Show();
+            this.Visible = false;
+        }
     }
 }

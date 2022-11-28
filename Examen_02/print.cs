@@ -51,7 +51,7 @@ namespace Examen_02
         {
 
             cnx.Open();
-            cmd.CommandText = "select * from QCM";
+            cmd.CommandText = "select * from QCM,Examen where Examen.id = QCM.id_E ";
             cmd.Connection = cnx;
             DataTable dt = new DataTable();
             adapter.Fill(dt);

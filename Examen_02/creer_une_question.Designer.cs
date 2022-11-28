@@ -472,8 +472,9 @@
             this.annuler.Name = "annuler";
             this.annuler.Size = new System.Drawing.Size(112, 34);
             this.annuler.TabIndex = 8;
-            this.annuler.Text = "Submit";
+            this.annuler.Text = "annuler";
             this.annuler.UseVisualStyleBackColor = true;
+            this.annuler.Click += new System.EventHandler(this.annuler_Click);
             // 
             // creer_une_question
             // 

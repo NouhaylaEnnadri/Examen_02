@@ -118,10 +118,25 @@ namespace Examen_02
         }
 
         private void affiQ_btn_Click(object sender, EventArgs e)
-        {
-            print print = new print();
-            print.Show();
-            this.Visible = false;
+        {   
+
+            string id = id_input.Text;  
+            if(id == "")
+            {
+                
+                    string message = "selectionner l'id de l'examen";
+                    MessageBox.Show(message);
+                
+
+            }
+            else
+            {
+                print print = new print();
+                print.Show();
+                this.Visible = false;
+            }
+
+            
         }
 
         private void enregistrer_Click(object sender, EventArgs e)
