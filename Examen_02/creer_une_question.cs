@@ -120,9 +120,11 @@ namespace Examen_02
             this.Visible = false;
 
             ////
-            /// cnx.Open();
+            /// 
+            
+           cnx.Open();
             cmd.Connection = cnx;
-            cmd.CommandText = "insert into Examen(id, id , note , dateD , dateF) values('" + name_input.Text + "','" + id_input.Text + "','" + duree.Text + "','" + dateD.Text + "','" + dateF.Text + "') ";
+            cmd.CommandText = "insert into QCM(id_Q ,  id_E , note , question , type ) values('" + id_input.Text + "','" + id_e.Text + "','" + note.Text + "','" + question_input.Text + "','" + "qcm" + "') ";
             cmd.ExecuteNonQuery();
             cnx.Close();
            
@@ -144,6 +146,11 @@ namespace Examen_02
         }
 
         private void proposition2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void id_e_TextChanged(object sender, EventArgs e)
         {
 
         }

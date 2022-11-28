@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.qcm = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.i = new System.Windows.Forms.Label();
+            this.id_e = new System.Windows.Forms.TextBox();
             this.note = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.id_rep2 = new System.Windows.Forms.CheckBox();
@@ -84,7 +86,7 @@
             // qcm
             // 
             this.qcm.AutoSize = true;
-            this.qcm.Location = new System.Drawing.Point(27, 67);
+            this.qcm.Location = new System.Drawing.Point(39, 67);
             this.qcm.Name = "qcm";
             this.qcm.Size = new System.Drawing.Size(79, 29);
             this.qcm.TabIndex = 1;
@@ -95,6 +97,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.i);
+            this.panel1.Controls.Add(this.id_e);
             this.panel1.Controls.Add(this.note);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.id_rep2);
@@ -115,9 +119,26 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // i
+            // 
+            this.i.AutoSize = true;
+            this.i.Location = new System.Drawing.Point(175, 249);
+            this.i.Name = "i";
+            this.i.Size = new System.Drawing.Size(46, 25);
+            this.i.TabIndex = 17;
+            this.i.Text = "ID_E";
+            // 
+            // id_e
+            // 
+            this.id_e.Location = new System.Drawing.Point(175, 277);
+            this.id_e.Name = "id_e";
+            this.id_e.Size = new System.Drawing.Size(37, 31);
+            this.id_e.TabIndex = 16;
+            this.id_e.TextChanged += new System.EventHandler(this.id_e_TextChanged);
+            // 
             // note
             // 
-            this.note.Location = new System.Drawing.Point(108, 243);
+            this.note.Location = new System.Drawing.Point(12, 277);
             this.note.Name = "note";
             this.note.Size = new System.Drawing.Size(89, 31);
             this.note.TabIndex = 15;
@@ -519,5 +540,7 @@
         private TextBox proposition2;
         private TextBox id_input;
         private TextBox question_input;
+        private Label i;
+        private TextBox id_e;
     }
 }
