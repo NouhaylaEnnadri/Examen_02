@@ -26,11 +26,12 @@ namespace Examen_02
         static SqlCommand cmd = new SqlCommand();
         static SqlDataAdapter adapter = new SqlDataAdapter(cmd);
         #endregion
+        #region unused methods
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
-
+        #endregion
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -70,8 +71,11 @@ namespace Examen_02
             affichage();
         }
 
+        #region button manipulation 
         private void ajouter_Click(object sender, EventArgs e)
         {
+
+            //naviguer to the creer une question form 
             creer_une_question creer_une_question = new creer_une_question();
             creer_une_question.Show();
             this.Visible = false;
@@ -110,6 +114,7 @@ namespace Examen_02
                 affichage();
 
             }
+            //vider les input 
             note.Text = "";
             enonce.Text = "";
             id_e.Text = "";
@@ -122,13 +127,14 @@ namespace Examen_02
 
 
         }
-        int flag = 0;
+        int flag = 0; // to know if the modif button was clicked once or twice
         private void modifier_Click(object sender, EventArgs e)
         {
-
+            //if it was the first time
            
             if (flag == 0)
             {
+                //disable this buttons
                 enonce.Enabled = false;
                 type.Enabled = false;
                 id.Enabled = false;
@@ -163,6 +169,7 @@ namespace Examen_02
             type.Text = "";
             id.Text = "";
         }
+        #endregion
     }
-    }
+}
 

@@ -16,13 +16,8 @@ namespace Examen_02
         {
             InitializeComponent();
         }
-        public static string ex  = ""; 
-        public string function ()
-        {
-
-            return id_input.Text;
-        }
-
+        public static string ex  = "";  //variables static pour passer l id_examen au form print
+        
         #region connexion 
         static string Chaine = @"Data Source=DESKTOP-H5O83VN\SQLEXPRESS;Initial Catalog=EXAMEN;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
@@ -30,16 +25,29 @@ namespace Examen_02
         static SqlCommand cmd = new SqlCommand();
         static SqlDataAdapter adapter = new SqlDataAdapter(cmd);
         #endregion
+
+        #region unused methods
+        private void dateD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void enregistrer_Click(object sender, EventArgs e)
+        {
+
+        }
         private void name_input_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void id_input_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void duree_TextChanged(object sender, EventArgs e)
         {
 
@@ -54,6 +62,8 @@ namespace Examen_02
         {
 
         }
+        #endregion
+        #region buttons manipulation 
 
         private void ajout_btn_Click(object sender, EventArgs e)
         {
@@ -63,7 +73,15 @@ namespace Examen_02
             cmd.CommandText = "insert into Examen(nom, id , duree , dateD , dateF) values('" + name_input.Text + "','" + id_input.Text + "','" + duree.Text + "','" + dateD.Text + "','" + dateF.Text + "') ";
             cmd.ExecuteNonQuery();
             cnx.Close();
-            affichage(); 
+            affichage();
+
+            #region read only buttons
+            mdf_btn.Enabled = false;
+            supp_btn.Enabled = false;
+            button1.Enabled = false;
+            affiQ_btn.Enabled = false;
+            ajout_btn.Enabled = false;
+            #endregion
         }
 
         private void mdf_btn_Click(object sender, EventArgs e)
@@ -111,6 +129,7 @@ namespace Examen_02
                 affichage(); 
 
             }
+            //vider les input 
             id_input.Text = "";
             name_input.Text = "";
             duree.Text = "";
@@ -123,11 +142,13 @@ namespace Examen_02
 
         private void ajoutQ_btn_Click(object sender, EventArgs e)
         {
-
+            //navigate to the other form 
 
             creer_une_question creer_une_question = new creer_une_question();
             creer_une_question.Show();
             this.Visible = false;
+
+            
 
         }
 
@@ -145,7 +166,8 @@ namespace Examen_02
 
             }
             else
-            {
+            {    
+                //navigate to the other form
                 print print = new print();
                 print.Show();
                 this.Visible = false;
@@ -153,14 +175,22 @@ namespace Examen_02
 
             
         }
-
-        private void enregistrer_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            //button enregistrer enregistre l'examen et ouvre la porte a creer un nouveau examen 
+            id_input.Text = "";
+            name_input.Text = "";
+            duree.Text = "";
+            dateD.Text = "";
+            dateF.Text = "";
         }
+        #endregion
+       
 
         private void listeQ_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            //pour afficher toutes les colonnes de la bases de donnes dans les text.input
             if (e.RowIndex >= 0)
             {
 
@@ -184,15 +214,7 @@ namespace Examen_02
             affichage(); 
         }
 
-        private void dateD_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateF_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+     
 
         #region functions 
         public void affichage() {
@@ -209,15 +231,7 @@ namespace Examen_02
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            id_input.Text = "";
-            name_input.Text = "";
-            duree.Text = "";
-            dateD.Text = "";
-            dateF.Text = "";
-        }
+       
     }
 
 }
